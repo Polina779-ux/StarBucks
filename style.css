@@ -504,7 +504,7 @@ a:hover {
 }
 .template-content__img-box img {
   transform: translate(var(--translate-x), calc(var(--translate-y) * -1));
-  mask: url(../assets/img/mask.svg);
+  mask: url(./assets/img/mask.svg);
 }
 .template-content__img-box .label {
   position: absolute;
