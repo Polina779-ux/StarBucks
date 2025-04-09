@@ -308,7 +308,16 @@ a:hover {
   display: flex !important;
 }
 
-/**/
+.hovered {
+  animation: 1s hovered infinite ease-in-out alternate;
+  transition: 1s;
+}
+
+@keyframes hovered {
+  to {
+    transform: scale(1.2);
+  }
+}
 .svg-sprite {
   visibility: hidden;
   width: 0;
