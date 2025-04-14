@@ -9,7 +9,6 @@ function showMobileContainer() {
 burger.addEventListener('click', showMobileContainer);
 
 const label = document.querySelectorAll ('.label')
-
 label.forEach(item => {
        item.addEventListener('mousedown', function() {
             item.classList.add('hovered')
