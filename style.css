@@ -195,7 +195,7 @@ a:hover {
   font-size: 17px;
 }
 
-.btn-arrow {
+.btn-arrow, .btn-volume {
   --size: 87px;
   --icon-size: 35px;
   --border-radius: 29px;
@@ -210,7 +210,7 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
-.btn-arrow:after {
+.btn-arrow:after, .btn-volume:after {
   content: "";
   position: absolute;
   width: calc(100% + var(--border-width));
@@ -668,10 +668,6 @@ a:hover {
   transform: rotate(360deg) scale(1.3);
 }
 
-[data-modal] {
-  color: red !important;
-}
-
 @media screen and (min-width: 768px) {
   .advantage {
     width: 228px;
@@ -742,7 +738,7 @@ a:hover {
     padding-left: 25px;
     padding-right: 25px;
   }
-  .btn-arrow {
+  .btn-arrow, .btn-volume {
     --size: 56px;
     --icon-size: 27px;
     --border-radius: 18px;
@@ -824,7 +820,7 @@ a:hover {
     align-items: center;
     margin-bottom: var(--gap);
   }
-  .footer-row:first-child .btn.btn-arrow {
+  .footer-row:first-child .btn.btn-arrow, .footer-row:first-child .btn.btn-volume {
     margin-left: auto;
   }
   .footer-nav {
@@ -912,5 +908,61 @@ a:hover {
   .labellabel_text-large {
     font-size: 24px;
   }
+}
+.custom-video {
+  --size: 60px;
+  border: 1px solid;
+  border-radius: 42px;
+  padding: var(--size);
+  background: linear-gradient(230deg, #fff 3.94%, #e5e5e5 64.08%, #fbfbfb 88.62%);
+}
+.custom-video video {
+  width: 100%;
+  margin-bottom: var(--size)/2;
+}
+
+.current-time {
+  color: #121517;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  align-items: self-start;
+  padding: 24px 0 36px;
+  gap: 18px;
+}
+.current-time button:hover {
+  color: #35C66B;
+}
+
+.volume-off {
+  opacity: 0;
+}
+
+.btn-volume.active .volume-off {
+  opacity: 1;
+}
+
+.video-description {
+  color: #292B2D;
+}
+.video-description h4 {
+  color: #000;
+}
+
+.show-hide {
+  margin-top: 24px;
+  font-weight: 600;
+}
+.show-hide.show {
+  color: red;
+}
+
+.video-description__content {
+  max-height: 100px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.video-description__content.show {
+  max-height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
