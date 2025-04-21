@@ -8,6 +8,7 @@
     <title>StarBucks</title>
     <link rel="shortcut icon" href="./assets/img/favicon.svg">
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.min.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
@@ -108,62 +109,6 @@
                 <h6 class="advantage-description">Cafe will serveat the most pleasant prices</h6>
             </div>
         </section>
-        <div class="container">
-            <div class="custom-video">
-                <video id="video" src="./assets/img/test-video.mp4">
-                </video>
-                <div class="btn-row">
-                    <button id="play" class="btn btn-primary">
-                        <svg class="icon-svg">
-                            <use href="#icon-play"></use>
-                        </svg>
-                    </button>
-                    <button id="pause" class="btn btn-secondary">
-                        <svg class="icon-svg">
-                            <use href="#icon-pause"></use>
-                        </svg>
-                    </button>
-                    <button id="stop" class="btn btn-secondary">
-                        <svg class="icon-svg">
-                            <use href="#icon-stop"></use>
-                        </svg>
-                    </button>
-                    <button id="volume" class="btn-volume">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="60" viewBox="0 0 56 60" fill="none">
-                            <g id="volume">
-                                <g class="volume-off">
-                                    <path id="Vector_3" d="M53.9999 23.4712L47.6687 30.2327L41.3374 36.9943" stroke="white" stroke-width="4" />
-                                    <path id="Vector_2" d="M41.3375 23.2252L47.6687 29.9868L54 36.7483" stroke="white" stroke-width="4" />
-                                </g>
-                                <g class="volume-on">
-                                    <path id="vector_1" d="M9.86534 17.4473C10.2064 17.0548 29.4124 4.04712 29.4124 4.04712C33.9611 29.2493 33.9611 29.3722 29.0436 56.2955L9.00478 41.9118M9.86534 17.4473L9.00478 41.9118M9.86534 17.4473C9.86534 17.4473 5.63279 16.089 3.59554 17.4473C2.12038 18.4308 1.25985 41.5076 2.85792 41.9118C5.18512 42.5005 9.00478 41.9118 9.00478 41.9118" stroke="white" stroke-width="4" />
-                                </g>
-                            </g>
-                        </svg>
-                    </button>
-                </div>
-                <div class="current-time">
-                    <button id="part_1">1:30 - learn html</button>
-                    <button id="part_2">2:20 - learn css</button>
-                    <button id="part_3">3:30 - cpecific css</button>
-                </div>
-                <div class="video-description">
-                    <div class="video-description__content">
-                        <h4>Lorem, ipsum.</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem itaque, aliquid accusantium ex et mollitia natus suscipit impedit qui numquam!</p>
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quia quam non eligendi architecto sit?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quia quam non eligendi architecto sit?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quia quam non eligendi architecto sit?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quia quam non eligendi architecto sit?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quia quam non eligendi architecto sit?</li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum similique, a eos ut pariatur officiis, non dolore, reiciendis aperiam magnam enim qui nemo deleniti sequi consequuntur esse facere? Incidunt, consequatur cum vel illo velit, rem numquam error maxime tenetur nobis itaque et reiciendis accusamus doloremque sapiente possimus quasi.</p>
-                    </div>
-                    <button class="show-hide">show</button>
-                </div>
-            </div>
-        </div>
         <section class="we-make">
             <div class="container">
                 <div class="template-content">
@@ -190,6 +135,29 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="product-slider">
+            <div class="container">
+                <div class="template-title template-title_row">
+                    <h2>New Our <span class="text-gradient">Products</span></h2>
+                    <h6>Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount!  Starbucks coffee and don't forget about the discount!</h6>
+                </div>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-product swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
         </section>
         <!-- <section>
         <div class="container">
@@ -322,13 +290,63 @@
             <path d="M2 20.0574V4.05737C2 2.9528 2.89543 2.05737 4 2.05737H20C21.1046 2.05737 22 2.9528 22 4.05737V20.0574C22 21.1619 21.1046 22.0574 20 22.0574H4C2.89543 22.0574 2 21.1619 2 20.0574Z" stroke="white" stroke-width="3" />
         </symbol>
     </svg>
-    <div id="cooking" class="modal" data-close-modal>
+    <div id="cooking" class="modal modal-video" data-close-modal>
         <div class="modal-body">
             <a href="#" class="btn btn-close" data-close-modal></a>
-            <video src="./assets/img/test-video.mp4" controls></video>
-            <div class="btn-row">
-                <button class="btn btn-primary" data-close-modal>Ok</button>
-                <button class="btn btn-secondary" data-close-modal>Close</button>
+            <div class="custom-video">
+                <video id="video" src="./assets/img/test-video.mp4">
+                </video>
+                <div class="btn-row">
+                    <button id="play" class="btn btn-primary">
+                        <svg class="icon-svg">
+                            <use href="#icon-play"></use>
+                        </svg>
+                    </button>
+                    <button id="pause" class="btn btn-secondary">
+                        <svg class="icon-svg">
+                            <use href="#icon-pause"></use>
+                        </svg>
+                    </button>
+                    <button id="stop" class="btn btn-secondary">
+                        <svg class="icon-svg">
+                            <use href="#icon-stop"></use>
+                        </svg>
+                    </button>
+                    <button id="volume" class="btn-volume">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="60" viewBox="0 0 56 60" fill="none">
+                            <g id="volume">
+                                <g class="volume-off">
+                                    <path id="Vector_3" d="M53.9999 23.4712L47.6687 30.2327L41.3374 36.9943" stroke="white" stroke-width="4" />
+                                    <path id="Vector_2" d="M41.3375 23.2252L47.6687 29.9868L54 36.7483" stroke="white" stroke-width="4" />
+                                </g>
+                                <g class="volume-on">
+                                    <path id="vector_1" d="M9.86534 17.4473C10.2064 17.0548 29.4124 4.04712 29.4124 4.04712C33.9611 29.2493 33.9611 29.3722 29.0436 56.2955L9.00478 41.9118M9.86534 17.4473L9.00478 41.9118M9.86534 17.4473C9.86534 17.4473 5.63279 16.089 3.59554 17.4473C2.12038 18.4308 1.25985 41.5076 2.85792 41.9118C5.18512 42.5005 9.00478 41.9118 9.00478 41.9118" stroke="white" stroke-width="4" />
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+                <div class="current-time">
+                    <button id="part_1">1:30 - learn html</button>
+                    <button id="part_2">2:20 - learn css</button>
+                    <button id="part_3">3:30 - cpecific css</button>
+                </div>
+                <div class="video-description">
+                    <div class="video-description__content">
+                        <h4>Lorem, ipsum.</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem itaque, aliquid accusantium ex et mollitia natus suscipit impedit qui numquam!</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quia quam non eligendi architecto sit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quia quam non eligendi architecto sit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quia quam non eligendi architecto sit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quia quam non eligendi architecto sit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quia quam non eligendi architecto sit?</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum similique, a eos ut pariatur officiis, non dolore, reiciendis aperiam magnam enim qui nemo deleniti sequi consequuntur esse facere? Incidunt, consequatur cum vel illo velit, rem numquam error maxime tenetur nobis itaque et reiciendis accusamus doloremque sapiente possimus quasi.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quas sapiente explicabo accusamus reiciendis eum veritatis animi quod aliquid illo sunt neque minus, repellendus error dolor similique deserunt ipsam possimus aspernatur. Quidem, ratione commodi tenetur molestias rerum rem debitis quia voluptatum aut maiores sed consectetur illum quasi placeat dolor quod, error eos. Nihil esse ad, amet, fugiat impedit id praesentium suscipit, dignissimos labore soluta odit! Officia doloribus expedita laborum veniam, sequi ipsam quis, esse sit corrupti labore aliquid eveniet ab. A odit voluptas pariatur veniam nesciunt ducimus quas illo corrupti rerum quam inventore nulla deserunt maxime libero ut, dignissimos officiis delectus ullam vitae cum. Ratione, assumenda. Nihil sunt, ratione impedit iste quia tempora vero harum, at possimus perspiciatis numquam rem! Laborum quis et illum repudiandae non labore repellendus velit tenetur eveniet vel nostrum maiores, a blanditiis voluptatibus officia ut suscipit voluptate, quidem asperiores enim totam quae ipsam harum doloribus. Quidem veniam voluptatum architecto vero voluptates temporibus, quam necessitatibus, quod quae, et debitis nisi velit nulla eos asperiores! Iste fuga dicta amet, odio eligendi minus commodi! Quaerat dolorem quibusdam aspernatur id, at impedit delectus, ab quos esse doloremque non vel excepturi, cumque fugiat nihil sequi voluptatibus omnis modi nulla. Culpa quasi expedita fuga omnis temporibus sunt reprehenderit itaque doloremque veniam magni nobis a asperiores, quia iusto consequatur nihil laudantium eaque aliquid? Sapiente, quia, velit ipsa voluptatum dignissimos sed non dolor eum magni quae vero inventore saepe! Ipsam consectetur incidunt repellendus tempora voluptas aperiam doloremque nobis. Voluptatem nobis dolor veritatis? Magni ab harum ullam enim, voluptas voluptatum id facere sapiente quas quasi dolores sit, unde reiciendis fugiat temporibus excepturi praesentium autem laudantium voluptatem. Ex, iure repellendus suscipit voluptas distinctio rerum odio dicta porro error voluptatem aperiam quos sit debitis natus nemo deleniti a optio nostrum! Eum dignissimos itaque earum repellendus assumenda cupiditate sequi magni nobis pariatur! Architecto labore accusamus ipsam fuga in esse, autem perferendis ipsa ea dolorem amet officiis cumque illo voluptates. Sapiente necessitatibus, repudiandae assumenda maiores fugit commodi animi a consequatur aspernatur voluptates quasi tempore vel magnam qui nesciunt ducimus eveniet optio soluta expedita, nisi asperiores facilis perferendis suscipit numquam!</p>
+                    </div>
+                    <button class="show-hide">show</button>
+                </div>
             </div>
         </div>
     </div>
@@ -370,9 +388,11 @@ MODAL WINDOW
         <h2>feedback</h2>
 </div>-->
 
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/modal.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/videoplayer.js"></script>
+
 </body>
 
 </html>

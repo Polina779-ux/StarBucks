@@ -1,34 +1,42 @@
-const trigers = document.querySelectorAll('[data-modal]')
 const body = document.querySelector('body')
+const trigers = document.querySelectorAll('[data-modal]')
 const closeTrigers = document.querySelectorAll('[data-close-modal]')
 
-
-function showModal(modal, event) {
+function closeModal(event) {
     event.preventDefault()
+
+    if (event.target.hasAttribute('data-close-modal')) {
+        event.target.closest('.modal').classList.remove('d-flex')
+        body.classList.remove('overflow-hidden')
+
+        if (event.target.closest('.modal').id == 'cooking') {
+            stopVideo()
+        }
+    }
+}
+
+function showModal(modal) {
     modal.classList.add('d-flex')
     body.classList.add('overflow-hidden')
 
+    if (modal.id == 'cooking') {
+        playVideo()
+    }
 }
-
-function closeModal(element, event) {
-event.preventDefault()
-element.closest('.modal').classList.remove('d-flex')
-body.classList.remove('overflow-hidden')
-}
-
 
 trigers.forEach(
     function(element) {
-        const modalId = element.getAttribute('data-modal') 
+        const modalId = element.getAttribute('data-modal')
         element.addEventListener('click', function(event) {
-          const modal = document.getElementById(modalId)
-          showModal(modal, event)
+            event.preventDefault()
+            const modal = document.getElementById(modalId)
+            showModal(modal)
         })
     }
 )
 
 closeTrigers.forEach(function(element) {
-        element.addEventListener('click', function(event) {
-            closeModal(element, event)
+    element.addEventListener('click', function(event) {
+        closeModal(event)
     })
 })
